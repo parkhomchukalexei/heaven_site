@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="GET" class="get-form">
+<div class="card" style="width: 18rem;">
+  <img src="{{form.photo}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{form.name}} {{form.surname}}</h5>
+    <p class="card-text"></p>
+    <a href="" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</form>
+
+{% endblock %}

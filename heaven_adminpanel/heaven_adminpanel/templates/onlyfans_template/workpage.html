@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a class="btn btn-success" href="{%  url 'onlyfans_new_table'  %}" role="button">Create Table</a>
+
+{% for table in form %}
+    <p> {{table.operator}}</p>
+    <table class="table table-bordered">
+  <thead>
+  <th>Clients</th>
+    <th>____</th>
+    {% for i in month %}
+    <th>{{i}}</th>
+    {% endfor %}
+  </thead>
+      <tfoot>
+      <th>Sum</th>
+      <th>___</th>
+      <th>sumsum</th>
+      </tfoot>
+
+        <tbody>
+        <tr>
+        <th rowspan="2">{{table.client.name}} {{table.client.surname}}</th>
+            <td>FP</td>
+            <td>
+                <input type="text">
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>PP</td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        </tbody>
+</table>
+{% endfor %}
+
+</form>
+{% endblock %}
